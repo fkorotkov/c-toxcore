@@ -67,7 +67,7 @@ START_TEST(test_basic)
         ip_port_loopback.ip = get_loopback();
         ip_port_loopback.port = net_htons(ports[i]);
         int ret = net_connect(sock, ip_port_loopback);
-        ck_assert_msg(ret == 0, "Failed to connect to created TCP relay server on port %d.", ports[i]);
+        ck_assert_msg(ret == 0, "Failed to connect to created TCP relay server on port %d: %d", ports[i], ret);
 
         // Leave open one connection for the next test.
         if (i + 1 < NUM_PORTS) {

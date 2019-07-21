@@ -20,5 +20,6 @@ cirrus-ci_task:
     - git clone --depth=1 https://github.com/TokTok/toktok-stack cirrus-ci-build
     - mv c-toxcore cirrus-ci-build
     - cd -
+  hosts_script: cat /etc/hosts
   test_all_script:
     - bazel test -c opt -k //c-toxcore/...

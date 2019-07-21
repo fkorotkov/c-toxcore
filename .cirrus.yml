@@ -5,7 +5,6 @@ cirrus-ci_task:
     cpu: 8
     memory: 12G
   configure_script:
-    - sudo apt update
     - sudo apt install -y
         autopoint
         libasound2-dev

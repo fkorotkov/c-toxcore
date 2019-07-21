@@ -43,7 +43,7 @@ static void do_TCP_server_delay(TCP_Server *tcp_s, Mono_Time *mono_time, int del
     do_TCP_server(tcp_s, mono_time);
     c_sleep(delay);
 }
-static uint16_t ports[NUM_PORTS] = {13215, 33445, 25643};
+static uint16_t ports[NUM_PORTS] = {33445, 25643, 13215};
 
 START_TEST(test_basic)
 {
